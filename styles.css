@@ -3,18 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    background: url('FHI.svg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    height: 100vh; /* Ensures body takes full viewport height */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
 }
 
 header {
-    background: url('FHI.svg') no-repeat center center/cover;
-    color: white;
-    height: 100vh;
+    
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,6 +26,23 @@ header {
     text-align: center;
 }
 
+.nav-button {
+    background: yellowgreen;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    line-height:40px;
+}
+
+.nav-button:hover {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .nav-button:hover * {
+    color: inherit; /* Ensures child elements inherit the color */
+  }
+  
 nav ul {
     list-style: none;
     display: flex;
@@ -35,6 +56,10 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    
 }
 
 .hero {
@@ -53,16 +78,6 @@ section {
 
 .about, .courses, .features, .testimonials, .contact {
     margin-top: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 @media (max-width: 768px) {
